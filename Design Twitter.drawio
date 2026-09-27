@@ -165,11 +165,11 @@
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow&lt;div&gt;-followerId(Partiion Key)&lt;/div&gt;&lt;div&gt;-followeeId&lt;/div&gt;&lt;div&gt;-createAt&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="120" x="1070" y="3320" as="geometry" />
         </mxCell>
-        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweets&lt;div&gt;-id&lt;/div&gt;&lt;div&gt;-content(images, videos)&lt;/div&gt;&lt;div&gt;-creatorId&lt;/div&gt;&lt;div&gt;-createdAt&lt;/div&gt;" vertex="1">
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweets&lt;div&gt;-id&lt;/div&gt;&lt;div&gt;-content(images, videos)&lt;/div&gt;&lt;div&gt;-creatorId&lt;/div&gt;&lt;div&gt;-createdAt&lt;/div&gt;&lt;div&gt;-isPrecomputed&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="120" x="1070" y="3460" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-46" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="Media Storage" vertex="1">
-          <mxGeometry height="110" width="220" x="950" y="3800" as="geometry" />
+          <mxGeometry height="110" width="220" x="930" y="3820" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-47" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-38" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-44" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -195,8 +195,8 @@
             <mxPoint x="1030" y="3810" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Database&amp;nbsp;" vertex="1">
-          <mxGeometry height="30" width="130" x="1160" y="3220" as="geometry" />
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Database&amp;nbsp; Dynamo DB" vertex="1">
+          <mxGeometry height="30" width="130" x="1080" y="3220" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-52" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-45" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -215,9 +215,6 @@
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="PreComputedFeeds&lt;div&gt;userId(PK)&lt;/div&gt;&lt;div&gt;tweets[](maximum 200)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="120" width="120" x="1230" y="3650" as="geometry" />
-        </mxCell>
-        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-65" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-62">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-59" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Storage_Queue.svg;" value="" vertex="1">
           <mxGeometry height="52" width="64" x="920" y="3076" as="geometry" />
@@ -240,7 +237,7 @@
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-66" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow GSI&lt;div&gt;-followerId&lt;/div&gt;&lt;div&gt;-followeeId (PK)&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="120" x="1340" y="3310" as="geometry" />
         </mxCell>
-        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-67" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-44" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.993;exitY=0.346;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-67" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-44" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.974;exitY=0.407;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-66" value="">
           <mxGeometry height="100" relative="1" width="100" as="geometry">
             <mxPoint x="1150" y="3450" as="sourcePoint" />
             <mxPoint x="1250" y="3350" as="targetPoint" />
@@ -254,6 +251,27 @@
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweets GSI&lt;div&gt;-id&lt;/div&gt;&lt;div&gt;-content(images, videos)&lt;/div&gt;&lt;div&gt;-creatorId(PK)&lt;/div&gt;&lt;div&gt;-createdAt&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="120" x="1380" y="3460" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-81" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.974;exitY=0.407;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-72" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="1190" y="3509" as="sourcePoint" />
+            <mxPoint x="1343" y="3507" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-83" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-45" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-64" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1060" y="3390" as="sourcePoint" />
+            <mxPoint x="1110" y="3340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-84" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="2 cases: Normal accounts(&amp;lt;10k followers) and celebrity accounts&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. If a normal account makes a tweet, then not manadatorily fill that in pre computed table&lt;/div&gt;&lt;div&gt;2. For celebrity accounts when they make a tweet then using the worker service the followers has to be fetched and and tweets has to fetch in batched order(batch of 1000) and rest has to be queued again and process it and store inthe precomputed table.&lt;br&gt;Using the isPrecomputed flag the tweet fetching can be refrained since its alrady taken from the pre computed store.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="280" width="280" x="340" y="4300" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-85" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="990" y="3090" as="sourcePoint" />
+            <mxPoint x="1060" y="3090" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
