@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="3TfGIvR1jOIAHOzqCSD1">
-    <mxGraphModel dx="1001" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1112" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -15,6 +15,245 @@
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-3" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Non Functional Requirements&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;1. &lt;/font&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;System should be available always for reading and posting the tweets.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;2. The system should be consistent with the tweets shared by people, availability&amp;gt;&amp;gt;consistency&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;3. The system should support 500M users and 200M + DAU.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;4. The tweet. creation and posting should be less than 500 ms delay.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;5. Tolerance to partition, even if any one instance is running, but its connectivity is failed over the network layer, using the rest of the instances the system should work&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;Additionals:&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;1. Security, authentication and authorization of users should be handled safely and user data has to be saved encrypted form..&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;2. Data archival and storage can be considered to store the older tweets.&lt;/font&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="405" width="620" x="120" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-4" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Core Entities&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;p&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1. Users: userName, email, createdAt....&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;2. Tweets: tweetId, creatorId, createdAt, content(description, images/videos ...)&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;3. Follow: followerId, followeeId, createdAt&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="220" width="530" x="120" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-5" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;APIs&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1. Follow API&lt;br&gt;POST: /api/v1/follow&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;Request Header: Authorization Bearer TOKEN&lt;br&gt;Request Body: {&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;followeeId: &quot;&quot;&lt;br&gt;}&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;Response&lt;br&gt;{&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;status: 200&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;message: unfollowed&lt;br&gt;}&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;2. Unfollow API&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;POST: /api/v1/unfollow&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;Request Header: Authorization Bearer TOKEN&lt;br&gt;Request Body: {&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;followeeId: &quot;&quot;&lt;br&gt;}&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;Response&lt;/span&gt;&lt;br style=&quot;font-size: medium;&quot;&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;{&lt;/span&gt;&lt;br style=&quot;font-size: medium;&quot;&gt;&lt;br style=&quot;font-size: medium;&quot;&gt;&lt;span style=&quot;font-size: medium; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;status: 200&lt;/span&gt;&lt;br style=&quot;font-size: medium;&quot;&gt;&lt;span style=&quot;font-size: medium; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;message: unfollowed&lt;/span&gt;&lt;br style=&quot;font-size: medium;&quot;&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;}&lt;/span&gt;&lt;font size=&quot;3&quot;&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;3. Create Tweet:&lt;br&gt;POST: /api/v1/tweets&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;Body:&lt;br&gt;{&lt;br&gt;&lt;br&gt;content:{description, images, videos etc...}&lt;br&gt;&lt;br&gt;}&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;4. Get Tweet Feeds&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;GET: /api/v1/feeds?cursor={timeStamp}&amp;amp;pageSize={pg_size}&amp;amp;pageNumber={pg_number}&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;Response:&lt;br&gt;{&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;tweets:[tweets],&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;font size=&quot;3&quot;&gt;nextCursor: {nextTimeStamp}&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font size=&quot;3&quot;&gt;}&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="1060" width="870" x="120" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-6" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;High Level Design (HLD)&amp;nbsp;&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="62" width="620" x="110" y="2210" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
+          <mxGeometry height="60" width="120" x="120" y="2450" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="API Gateway" vertex="1">
+          <mxGeometry height="60" width="120" x="330" y="2450" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweet Service" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="2450" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Feed Service" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="2560" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow Service" vertex="1">
+          <mxGeometry height="60" width="120" x="600" y="2350" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-17" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-8" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="600" y="2500" as="sourcePoint" />
+            <mxPoint x="650" y="2450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-18" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-7" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="230" y="2479.5" as="sourcePoint" />
+            <mxPoint x="380" y="2479.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-19" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-8" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="460" y="2480" as="sourcePoint" />
+            <mxPoint x="590" y="2560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-20" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-11" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="580" y="2420" as="sourcePoint" />
+            <mxPoint x="590" y="2425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="442" width="400" x="860" y="2300" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow&lt;div&gt;-followerId(Partiion Key)&lt;/div&gt;&lt;div&gt;-followeeId&lt;/div&gt;&lt;div&gt;-createAt&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="910" y="2420" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweets&lt;div&gt;-id&lt;/div&gt;&lt;div&gt;-content(images, videos)&lt;/div&gt;&lt;div&gt;-creatorId&lt;/div&gt;&lt;div&gt;-createdAt&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="120" x="910" y="2560" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-26" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="Media Storage" vertex="1">
+          <mxGeometry height="110" width="220" x="870" y="2813" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-27" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-11" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="2520" as="sourcePoint" />
+            <mxPoint x="790" y="2470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-28" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="2510" as="sourcePoint" />
+            <mxPoint x="910" y="2565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-29" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-9" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" target="UQ3sa2eTAy_rHA3YkZMz-26" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="730" y="2550" as="sourcePoint" />
+            <mxPoint x="970" y="2775" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-30" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-7" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" target="UQ3sa2eTAy_rHA3YkZMz-26" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="230" y="2640" as="sourcePoint" />
+            <mxPoint x="870" y="2910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Database&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="130" x="1000" y="2320" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-32" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-24" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="2590" as="sourcePoint" />
+            <mxPoint x="1360" y="3027" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-33" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-10" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="2630" as="sourcePoint" />
+            <mxPoint x="1270" y="3067" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Deep Diving into the System&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="450" x="150" y="2970" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="API Gateway" vertex="1">
+          <mxGeometry height="60" width="120" x="490" y="3350" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-60" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="950" y="3130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweet Service" vertex="1">
+          <mxGeometry height="60" width="120" x="760" y="3350" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Feed Service" vertex="1">
+          <mxGeometry height="60" width="120" x="760" y="3460" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow Service" vertex="1">
+          <mxGeometry height="60" width="120" x="760" y="3250" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-39" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-35" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-36" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="760" y="3400" as="sourcePoint" />
+            <mxPoint x="810" y="3350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-40" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-35" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="3380" as="sourcePoint" />
+            <mxPoint x="540" y="3379.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-41" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-35" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="620" y="3380" as="sourcePoint" />
+            <mxPoint x="750" y="3460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-42" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-38" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-35" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="740" y="3320" as="sourcePoint" />
+            <mxPoint x="750" y="3325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="600" width="560" x="1000" y="3190" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow&lt;div&gt;-followerId(Partiion Key)&lt;/div&gt;&lt;div&gt;-followeeId&lt;/div&gt;&lt;div&gt;-createAt&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="1070" y="3320" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweets&lt;div&gt;-id&lt;/div&gt;&lt;div&gt;-content(images, videos)&lt;/div&gt;&lt;div&gt;-creatorId&lt;/div&gt;&lt;div&gt;-createdAt&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="120" x="1070" y="3460" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-46" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="Media Storage" vertex="1">
+          <mxGeometry height="110" width="220" x="950" y="3800" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-47" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-38" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-44" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="900" y="3420" as="sourcePoint" />
+            <mxPoint x="950" y="3370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-48" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="880" y="3410" as="sourcePoint" />
+            <mxPoint x="1070" y="3465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-49" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-36" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" target="UQ3sa2eTAy_rHA3YkZMz-46" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="890" y="3450" as="sourcePoint" />
+            <mxPoint x="1130" y="3675" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-50" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" target="UQ3sa2eTAy_rHA3YkZMz-46" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="3380" as="sourcePoint" />
+            <mxPoint x="1030" y="3810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Database&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="130" x="1160" y="3220" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-52" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-45" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="880" y="3490" as="sourcePoint" />
+            <mxPoint x="1520" y="3927" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-53" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-37" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-44" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="790" y="3530" as="sourcePoint" />
+            <mxPoint x="1430" y="3967" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-54" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
+          <mxGeometry height="60" width="120" x="270" y="3350" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="PreComputedFeeds&lt;div&gt;userId(PK)&lt;/div&gt;&lt;div&gt;tweets[](maximum 200)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="1230" y="3650" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-65" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-59" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Storage_Queue.svg;" value="" vertex="1">
+          <mxGeometry height="52" width="64" x="920" y="3076" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Tweet created" vertex="1">
+          <mxGeometry height="30" width="110" x="820" y="3150" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-62" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Async Workers" vertex="1">
+          <mxGeometry height="60" width="120" x="1060" y="3068" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-63" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Async Workers" vertex="1">
+          <mxGeometry height="60" width="120" x="1070" y="3076" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-79" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Async Workers" vertex="1">
+          <mxGeometry height="60" width="120" x="1080" y="3076" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-66" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow GSI&lt;div&gt;-followerId&lt;/div&gt;&lt;div&gt;-followeeId (PK)&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="1340" y="3310" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-67" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-44" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.993;exitY=0.346;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="1150" y="3450" as="sourcePoint" />
+            <mxPoint x="1250" y="3350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-68" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-66" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-64" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="980" y="3340" as="sourcePoint" />
+            <mxPoint x="1030" y="3290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweets GSI&lt;div&gt;-id&lt;/div&gt;&lt;div&gt;-content(images, videos)&lt;/div&gt;&lt;div&gt;-creatorId(PK)&lt;/div&gt;&lt;div&gt;-createdAt&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="120" x="1380" y="3460" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
