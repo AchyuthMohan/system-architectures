@@ -1,9 +1,12 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="3TfGIvR1jOIAHOzqCSD1">
-    <mxGraphModel dx="1112" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2002" dy="1026" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-111" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;" value="" vertex="1">
+          <mxGeometry height="610" width="770" x="1010" y="3170" as="geometry" />
+        </mxCell>
         <mxCell id="W1eGZ3S9uEBxySaymrxa-2" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Design Twitter System&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="40" width="430" x="210" y="60" as="geometry" />
         </mxCell>
@@ -126,6 +129,9 @@
             <mxPoint x="950" y="3130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-96" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="UQ3sa2eTAy_rHA3YkZMz-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweet Service" vertex="1">
           <mxGeometry height="60" width="120" x="760" y="3350" as="geometry" />
         </mxCell>
@@ -159,9 +165,6 @@
             <mxPoint x="750" y="3325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
-          <mxGeometry height="600" width="560" x="1000" y="3190" as="geometry" />
-        </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow&lt;div&gt;-followerId(Partiion Key)&lt;/div&gt;&lt;div&gt;-followeeId&lt;/div&gt;&lt;div&gt;-createAt&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="120" x="1070" y="3320" as="geometry" />
         </mxCell>
@@ -172,7 +175,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-46" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="Media Storage" vertex="1">
-          <mxGeometry height="110" width="220" x="930" y="3820" as="geometry" />
+          <mxGeometry height="110" width="220" x="900" y="3830" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-47" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-38" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-44" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -186,7 +189,7 @@
             <mxPoint x="1070" y="3465" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-49" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-36" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" target="UQ3sa2eTAy_rHA3YkZMz-46" value="">
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-49" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-36" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-46" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="890" y="3450" as="sourcePoint" />
             <mxPoint x="1130" y="3675" as="targetPoint" />
@@ -237,8 +240,11 @@
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Async Workers" vertex="1">
           <mxGeometry height="60" width="120" x="1080" y="3076" as="geometry" />
         </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-108" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-66" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow GSI&lt;div&gt;-followerId&lt;/div&gt;&lt;div&gt;-followeeId (PK)&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="120" x="1340" y="3310" as="geometry" />
+          <mxGeometry height="90" width="120" x="1570" y="3310" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-67" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-44" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.974;exitY=0.407;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-66" value="">
           <mxGeometry height="100" relative="1" width="100" as="geometry">
@@ -289,10 +295,27 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-88" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CDN" vertex="1">
-          <mxGeometry height="60" width="120" x="270" y="3845" as="geometry" />
+          <mxGeometry height="60" width="120" x="270" y="3855" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-90" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Pull Based" vertex="1">
           <mxGeometry height="30" width="60" x="580" y="3840" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-98" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-92" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Storage_Queue.svg;" value="" vertex="1">
+          <mxGeometry height="52" width="64" x="788" y="3990" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-109" edge="1" parent="1" source="UQ3sa2eTAy_rHA3YkZMz-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="UQ3sa2eTAy_rHA3YkZMz-110">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1760" y="4016.000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-97" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Async Notification Processor" vertex="1">
+          <mxGeometry height="60" width="120" x="1570" y="3986" as="geometry" />
+        </mxCell>
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-110" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
+          <mxGeometry height="60" width="120" x="1740" y="3986.000000000001" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
