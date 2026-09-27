@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="3TfGIvR1jOIAHOzqCSD1">
-    <mxGraphModel dx="2002" dy="1026" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1335" dy="684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -201,8 +201,8 @@
             <mxPoint x="1030" y="3810" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Database&amp;nbsp; Dynamo DB" vertex="1">
-          <mxGeometry height="30" width="130" x="1080" y="3220" as="geometry" />
+        <mxCell id="UQ3sa2eTAy_rHA3YkZMz-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Database&amp;nbsp; AWS Dynamo DB" vertex="1">
+          <mxGeometry height="30" width="130" x="1010" y="3170" as="geometry" />
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-52" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="UQ3sa2eTAy_rHA3YkZMz-45" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -316,6 +316,18 @@
         </mxCell>
         <mxCell id="UQ3sa2eTAy_rHA3YkZMz-110" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client" vertex="1">
           <mxGeometry height="60" width="120" x="1740" y="3986.000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="6wfpia9fg6fibx1uqKvz-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Tweet Service" vertex="1">
+          <mxGeometry height="60" width="120" x="750" y="3355" as="geometry" />
+        </mxCell>
+        <mxCell id="6wfpia9fg6fibx1uqKvz-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Feed Service" vertex="1">
+          <mxGeometry height="60" width="120" x="750" y="3470" as="geometry" />
+        </mxCell>
+        <mxCell id="6wfpia9fg6fibx1uqKvz-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Follow Service" vertex="1">
+          <mxGeometry height="60" width="120" x="750" y="3260" as="geometry" />
+        </mxCell>
+        <mxCell id="6wfpia9fg6fibx1uqKvz-4" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Math&lt;/h1&gt;&lt;p&gt;&amp;nbsp;1 Tweet = text + media&lt;/p&gt;&lt;p&gt;text - 200 char= 200x 1 Byte= 200Bytes Max&lt;/p&gt;&lt;p&gt;media- 10 MB&lt;/p&gt;&lt;p&gt;total size of a tweet= 10MB + 200 Bytes&lt;/p&gt;&lt;p&gt;200 M DAU&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;each user approx 10 tweets/day&lt;/p&gt;&lt;p&gt;Total no of tweets= 200M x 10&lt;/p&gt;&lt;p&gt;2 Billion&lt;/p&gt;&lt;p&gt;2 Billion x 10 MB&lt;/p&gt;&lt;p&gt;20 PB---&amp;gt; Total Memory&lt;/p&gt;" vertex="1">
+          <mxGeometry height="420" width="550" x="370" y="4620" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
