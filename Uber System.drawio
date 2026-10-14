@@ -1,9 +1,12 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="DuArccp7BvFhS8R0hg8X">
-    <mxGraphModel dx="1371" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="963" dy="493" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ay4Ny3Xfk4SZc62VGw-S-115" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="" vertex="1">
+          <mxGeometry height="790" width="660" x="890" y="1180" as="geometry" />
+        </mxCell>
         <mxCell id="ay4Ny3Xfk4SZc62VGw-S-52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="850" width="490" x="720" y="200" as="geometry" />
         </mxCell>
@@ -285,9 +288,6 @@
         <mxCell id="ay4Ny3Xfk4SZc62VGw-S-92" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Ride Management Service" vertex="1">
           <mxGeometry height="60" width="120" x="750" y="1435" as="geometry" />
         </mxCell>
-        <mxCell id="ay4Ny3Xfk4SZc62VGw-S-110" edge="1" parent="1" source="ay4Ny3Xfk4SZc62VGw-S-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ay4Ny3Xfk4SZc62VGw-S-109">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="ay4Ny3Xfk4SZc62VGw-S-93" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Ride Management Service" vertex="1">
           <mxGeometry height="60" width="120" x="760" y="1450" as="geometry" />
         </mxCell>
@@ -334,6 +334,18 @@
         </mxCell>
         <mxCell id="ay4Ny3Xfk4SZc62VGw-S-109" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="Ride updates Events Consumer" vertex="1">
           <mxGeometry height="60" width="120" x="440" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="ay4Ny3Xfk4SZc62VGw-S-111" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Complete Working&lt;/h1&gt;&lt;p&gt;1. Client calls the pricing service with source destination data and obtains the pricing details of different ride options(bike, car, premium etc)&lt;/p&gt;&lt;p&gt;2. Client requests for ride through the ride mgmt service. It creates an entry in the rides table and sends back the success response with ride_id.&lt;/p&gt;&lt;p&gt;3. Client using the ride_id invokes the ride status API (/api/v1/rides/active) to&amp;nbsp;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ride updates Events Consumer that will then establish an SSE connection with which will send the updates of ride(driver accept, driver reject, real time driver tracking etc).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;4. The driver client will be always calling the API for getting all the requested rides with their current location(latitude and longitude)(/api/v1/driver/get-rides?lat={lat}&amp;amp;long={long} in a frequency of 2-3 seconds this will return the list of all requested rides in that area(say 1km radius from this location which is configurable.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;5. once the driver accepts or rejects a ride that will be notified to user via the pub/sub and&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;Ride updates Events Consumer service by SSE connection which was established with user.&lt;/span&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center;&quot;&gt;6. The SSE connection details will be stored in memory of each instance of&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ride updates Events Consumer Service like(ride_id---&amp;gt;connectionId) using this connection id it will push the event updates to clients. If any of this instance goes down or network failure takes place then when user comes back and call&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;/api/v1/rides/active) API which will establish new connection with another or same instance if its active and receive updates.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;7. The&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ride updates Events Consumer Service will receive the events from pub/sub and identifies the driver_id and using the rides GSI table identifies the ride_id and using that it will identify the connection_id in memory and sends the updates to clients.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;8. The driver location will also be stored in the location table for future refference.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;9. The rides table can be optimized by considering the start_location as shard key and it can be scaled separately.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;10. The multiple calls by driver app to check for rides can be turned to event driven that is when the user requests for ride, it will send events to drivers again using SSE connections that was done like in client side.&lt;/p&gt;" vertex="1">
+          <mxGeometry height="820" width="480" x="130" y="2130" as="geometry" />
+        </mxCell>
+        <mxCell id="ay4Ny3Xfk4SZc62VGw-S-112" edge="1" parent="1" source="ay4Ny3Xfk4SZc62VGw-S-55" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.798;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" target="ay4Ny3Xfk4SZc62VGw-S-104" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="1530" as="sourcePoint" />
+            <mxPoint x="740" y="1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ay4Ny3Xfk4SZc62VGw-S-113" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" value="Get Connection" vertex="1">
+          <mxGeometry height="30" width="110" x="520" y="1510" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
