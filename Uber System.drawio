@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="DuArccp7BvFhS8R0hg8X">
-    <mxGraphModel dx="918" dy="1640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="886" dy="1623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -361,6 +361,9 @@
         </mxCell>
         <mxCell id="TOLSZOsAuB10ZPuPDYGM-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="APN(App Native Push Notification), Firebase" vertex="1">
           <mxGeometry height="30" width="140" x="390" y="1498" as="geometry" />
+        </mxCell>
+        <mxCell id="TOLSZOsAuB10ZPuPDYGM-4" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;App Native Notification Over SSE note:&lt;/h1&gt;&lt;div&gt;The connection should run in background even if the app is temporarily closed. SSE gets closed when the app is closed so re establishment of connection is needed.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="400" x="850" y="2030" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
