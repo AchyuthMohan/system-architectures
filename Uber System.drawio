@@ -310,7 +310,7 @@
           <mxGeometry height="30" width="60" x="690" y="1625" as="geometry" />
         </mxCell>
         <mxCell id="ay4Ny3Xfk4SZc62VGw-S-100" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;" value="Internal Connection Mapping in Ride Mgmt Service&lt;br&gt;&lt;br&gt;ride_id---&amp;gt;connectionId&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="140" width="170" x="130" y="1890" as="geometry" />
+          <mxGeometry height="100" width="280" x="130" y="1890" as="geometry" />
         </mxCell>
         <mxCell id="ay4Ny3Xfk4SZc62VGw-S-101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Rides GSI(Global Secondary Indexing)&lt;div&gt;- ride_id(SK)&lt;/div&gt;&lt;div&gt;- start_location&lt;/div&gt;&lt;div&gt;-destination_location&lt;/div&gt;&lt;div&gt;-status&lt;/div&gt;&lt;div&gt;-driver_id(PK)&lt;/div&gt;&lt;div&gt;-customer_id&lt;/div&gt;" vertex="1">
           <mxGeometry height="130" width="140" x="1360" y="1390" as="geometry" />
@@ -364,6 +364,9 @@
         </mxCell>
         <mxCell id="TOLSZOsAuB10ZPuPDYGM-4" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;App Native Notification Over SSE note:&lt;/h1&gt;&lt;div&gt;The connection should run in background even if the app is temporarily closed. SSE gets closed when the app is closed so re establishment of connection is needed.&lt;/div&gt;" vertex="1">
           <mxGeometry height="150" width="400" x="850" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="TOLSZOsAuB10ZPuPDYGM-5" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;S2 Geometry:&lt;/h1&gt;&lt;div&gt;This can be used to calculate the nearness of source and destination while suggesting the drivers with rides with radius of 2 km rides.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="400" x="600" y="2200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
